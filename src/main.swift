@@ -1,1 +1,5 @@
-print("Hello, World")
+func main() throws {
+  Command.usage()
+}
+
+try main()

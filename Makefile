@@ -5,7 +5,7 @@ TARGET := v12n-cli
 all : $(TARGET)
 
 .PHONY : $(TARGET)
-$(TARGET) : src/main.swift
+$(TARGET) : src/*.swift
 	mkdir -p $(BUILD_DIR)
 	swiftc $^ -o $(BUILD_DIR)/$@
 
