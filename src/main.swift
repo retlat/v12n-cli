@@ -15,6 +15,8 @@ func main() throws {
       return
     }
     try Command.start(configFileAt: CommandLine.arguments[2])
+  case "print-config":
+    Command.printConfig()
   default:
     Command.usage()
   }
