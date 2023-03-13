@@ -8,6 +8,7 @@ all : $(TARGET)
 $(TARGET) : src/*.swift
 	mkdir -p $(BUILD_DIR)
 	swiftc $^ -o $(BUILD_DIR)/$@
+	codesign -s - --entitlements=./entitlements.plist $(BUILD_DIR)/$@
 
 .PHONY : clean
 clean :
